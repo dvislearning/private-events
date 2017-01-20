@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'events/new'
-
-  get 'events/show'
-
-  get 'events/index'
-
   get '/home', to:'static_pages#home'
 
   get '/about', to: 'static_pages#about'
@@ -18,6 +12,7 @@ Rails.application.routes.draw do
   root 'static_pages#home' 
 
   resources :users, only: [:new, :show, :create]
+  resources :events, only: [:new, :show, :create, :index]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

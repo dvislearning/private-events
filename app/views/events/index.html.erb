@@ -1,2 +1,19 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<h1><%= @events.count  %> <%= "Events".pluralize(@events.count) %></h1>
+<% provide(:title, 'Events List') %>
+<div class="row">
+  <div class="col-md-8">
+    <% if @events.any? %>
+      <ol class="microposts">
+        <% @events.each do |event| %>
+        	<li> 
+        	<h4><%= event.name %></h4>
+        	<strong>Location: </strong> <%= event.location %><br/ >
+        	<strong>Date: </strong><%= event.date %><br/ ><br/ >
+        	<%= event.description %><br/ ><br/ >
+        	<strong>Created By: </strong><%= event.creator.name %>
+        	</li>
+    	<% end %>
+      </ol>
+    <% end %>
+  </div>  
+</div>
