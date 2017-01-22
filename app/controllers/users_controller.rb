@@ -8,8 +8,8 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
-      flash[:info] = "You have been logged in"
-      redirect_to about_url
+      flash[:info] = "Account Created.  Please log in."
+      redirect_to login_path
   	else
   		render 'new'
   	end
