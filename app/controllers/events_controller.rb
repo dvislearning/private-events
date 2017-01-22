@@ -27,6 +27,6 @@
 	private
 
 	def user_params
-		params.require(:event).permit(:name, :description. :date, :location)
+		params.require(:event).permit(:name, :description, :date, :location)
 	end	
 end
