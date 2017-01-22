@@ -1,4 +1,12 @@
-<h1>Events#show</h1>
-<p><%= @event.name %></p>
+<h1><%= @event.name %></h1>
+	<strong>Location: </strong><br/ > <%= @event.location %><br/ ><br/ >
+	<strong>Date: </strong><br/ ><%= @event.date %><br/ ><br/ >
+	<strong>Description: </strong><br/ ><%= @event.description %><br/ ><br/ >
+	<strong>Created By: </strong><br/ ><%= link_to @event.creator.name, @event.creator %>
 <br/ >
-<p>Find me in app/views/events/show.html.erb</p>
+<br/ >
+	<strong>Attendees: </strong><ul>
+		<% @event.attendees.each do |person_attending| %>
+			<li><%= link_to person_attending.name, person_attending %></li>
+		<% end %>
+	</ul>

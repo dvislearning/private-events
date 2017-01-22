@@ -1,0 +1,13 @@
+    <% if Event.any? %>
+      <ol class="microposts">
+        <% @events.each do |event| %>
+        	<li> 
+        	<h4><%= event.name %></h4>
+        	<strong>Location: </strong> <%= event.location %><br/ >
+        	<strong>Date: </strong><%= event.date %><br/ ><br/ >
+        	<%= event.description %><br/ ><br/ >
+        	<strong>Created By: </strong><%= event.creator.name %>
+        	</li>
+    	<% end %>
+      </ol>
+    <% end %>
