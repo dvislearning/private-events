@@ -7,7 +7,7 @@
       </h1><br/ >
       <br/ >
         <ul style="list-style: none;">
-          <% @upcoming_events.each do | event | %>
+          <% Event.upcoming.each do | event | %>
             <li><%= link_to event.name, event %></li><br/ >
           <% end %>
         </ul>  
@@ -16,7 +16,7 @@
       </h1><br/ >
       <br/ >
         <ul style="list-style: none;">
-          <% @prev_events.each do | event | %>
+          <% Event.upcoming.each do | event | %>
             <li><%= link_to event.name, event %></li><br/ >
           <% end %>
         </ul>              

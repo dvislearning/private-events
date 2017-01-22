@@ -4,10 +4,10 @@ class Event < ApplicationRecord
 	has_many :attendees, :through => :event_users
 
 	def self.past
-		self.where('date > ?', Time.now)
+		self.where('date < ?', Time.now)
 	end
 
 	def self.upcoming
-		self.where('date <= ?', Time.now)
+		self.where('date >= ?', Time.now)
 	end	
 end
