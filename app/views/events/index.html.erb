@@ -6,7 +6,7 @@
       <ol class="microposts">
         <% Event.upcoming.each do |event| %>
         	<li> 
-        	<h4><%= event.name %></h4>
+        	<h4><%= link_to event.name, event %></h4>
         	<strong>Location: </strong> <%= event.location %><br/ >
         	<strong>Date: </strong><%= event.date %><br/ ><br/ >
         	<%= event.description %><br/ ><br/ >
@@ -18,14 +18,14 @@
   </div>  
 </div>
 
-<h1><%= @events.count  %> <%= "Past Events".pluralize(@events.count) %></h1>
+<h1><%= Event.past.count  %> <%= "Past Events".pluralize(@events.count) %></h1>
 <div class="row">
   <div class="col-md-8">
-    <% if @events.any? %>
+    <% if Event.past.any? %>
       <ol class="microposts">
-        <% @events.each do |event| %>
+        <% Event.past.each do |event| %>
           <li> 
-          <h4><%= event.name %></h4>
+          <h4><%= link_to event.name, event %></h4>
           <strong>Location: </strong> <%= event.location %><br/ >
           <strong>Date: </strong><%= event.date %><br/ ><br/ >
           <%= event.description %><br/ ><br/ >

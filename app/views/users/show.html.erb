@@ -16,7 +16,7 @@
       </h1><br/ >
       <br/ >
         <ul style="list-style: none;">
-          <% Event.upcoming.each do | event | %>
+          <% Event.past.each do | event | %>
             <li><%= link_to event.name, event %></li><br/ >
           <% end %>
         </ul>              
