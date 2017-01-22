@@ -11,7 +11,6 @@
 
 	def create
 		@event = @current_user.created_events.build(user_params)
-		@event.date = Time.now
 		if @event.save
 			flash[:success] = "Event created successfully"
 			redirect_to @current_user
@@ -29,13 +28,5 @@
 
 	def user_params
 		params.require(:event).permit(:name,:description)
-	end
-
-    # Redirects to login_url if not logged in
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = "Please log in"
-        redirect_to login_url
-      end
-    end	
+	end	
 end

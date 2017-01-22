@@ -22,5 +22,13 @@ class ApplicationController < ActionController::Base
 
   def show_user_name
   	@user_name = @current_user.name
-  end       
+  end 
+
+  # Redirects to login_url if not logged in
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "Please log in"
+      redirect_to login_url
+    end
+  end        
 end
