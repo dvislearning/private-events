@@ -1,24 +1,13 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Member's Only is an exercise in Active Record associatiuons using the Ruby on Rails framework.  Private Events allows users to create and attend events.  Users are able to access a list of all upcoming and past events, as well as a list of their own events, both past and upcoming.
 
-Things you may want to cover:
+Part of The Odin Project's [Ruby on Rails Curriculum.](http://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
-* Ruby version
+Use the following credentials to log in:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+|             Email            |
+|:----------------------------:|
+|   foobar@example.com         |
+|   example@example.com        |
+|   hello@example.com          |
